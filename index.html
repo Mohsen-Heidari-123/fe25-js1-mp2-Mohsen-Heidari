@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="startpage">
+        <h1>Welcome to the pig game</h1>
+        <div id="user-info">
+          <h2>User registeration</h2>
+          <form id="startgame"><input
+            type="text"
+            value=""
+            id="username"
+            placeholder="enter your name"
+          />
+          <button>start</button></form>
+        </div>
+        <img
+          id="logo"
+          src="https://www.creativefabrica.com/wp-content/uploads/2022/12/20/Cute-Adorable-Kawaii-Fluffy-Baby-Pig-Full-Body-Light-Pink-53530839-1.png"
+          alt="Pig logo"
+        />
+      </div>
+      <div class="dashbord">
+        <h3>Welcome to the pig game</h3>
+        <div class="dash">
+          <div class="status">
+            <h4>status</h4>
+            <h5>total point: <span id="totalpoint"></span></h5>
+            <h5>rounds: <span id="rounds"></span></h5>
+            <h5>points: <span id="points"></span></h5>
+            <h5 id="win"></h5>
+          </div>
+          <div class="dice">
+            <div id="dice-1" class="diceitems"><p>⚫</p></div>
+            <div id="dice-2" class="diceitems"><p>⚫⚫</p></div>
+            <div id="dice-3" class="diceitems">
+              <p>⚫⚫<br />⚫</p>
+            </div>
+            <div id="dice-4" class="diceitems">
+              <p>⚫⚫<br />⚫⚫</p>
+            </div>
+            <div id="dice-5" class="diceitems">
+              <p>⚫⚫<br />⚫⚫<br />⚫</p>
+            </div>
+            <div id="dice-6" class="diceitems">
+              <p>⚫⚫<br />⚫⚫<br />⚫⚫</p>
+            </div>
+          </div>
+        </div>
+        <div class="contorol">
+          <button id="freeze">freeze</button>
+          <button id="tryagain">Roll</button>
+          <button id="resert">reset</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- // Roll addlinener generera 1 till 6 random gå genom all dices och display none forutom generar det tal -1  // -->
