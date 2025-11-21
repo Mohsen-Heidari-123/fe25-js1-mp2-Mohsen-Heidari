@@ -8,7 +8,7 @@ document.body.style.backgroundColor = `hsl(${color}, 10.3%, 73.3%)`;
 const dices = document.getElementsByClassName("diceitems");
 console.log(dices);
 
-document.getElementById("startgame").addEventListener("keypress", function (i){
+document.getElementById("startgame").addEventListener("click", function (i){
 
     if(i.key==="Enter"){
         i.preventDefault();
