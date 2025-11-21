@@ -27,8 +27,9 @@
 }
 .dice {
   display: inline-flex;
-
+  color: white;
   align-items: center;
+
 }
 .dice div {
   display: none;
@@ -50,3 +51,9 @@ margin-top: 30px;
 border-radius: 20px;
 border: 2px solid aqua;
 } 
+
+.status h5{
+border: solid 1px red;
+background-color: antiquewhite;
+
+}

@@ -8,11 +8,9 @@ document.body.style.backgroundColor = `hsl(${color}, 10.3%, 73.3%)`;
 const dices = document.getElementsByClassName("diceitems");
 console.log(dices);
 
-document.getElementById("startgame").addEventListener("click", function (i){
-
-        i.preventDefault();
-        startpage();
-    
+document.getElementById("startgame").addEventListener("submit", function (e) {
+  e.preventDefault();
+  startpage();
 });
 
 function startpage() {
@@ -20,11 +18,11 @@ function startpage() {
   console.log(username);
   let pEl = document.createElement("p");
   document.querySelector(".status").appendChild(pEl);
- pEl.innerText = username;
+  pEl.innerText = username;
   if (username.length > 0) {
     document.getElementsByClassName("startpage")[0].style.display = "none";
     document.getElementsByClassName("dashbord")[0].style.display = "block";
-     document.getElementById("logo").style.display="none";
+    document.getElementById("logo").style.display = "none";
   } else {
     alert("please enter your name");
   }
@@ -34,12 +32,14 @@ const rollBtn = document.querySelector("#tryagain");
 rollBtn.addEventListener("click", rollDice);
 
 function rollDice() {
-  let diceRoll = Math.floor(Math.random() * 6 ) + 1;
+  let diceRoll = Math.floor(Math.random() * 6) + 1;
+
   if (curentdise) {
     curentdise.style.display = "none";
   }
   curentdise = dices[diceRoll - 1];
   curentdise.style.display = "block";
+  curentdise.style.backgroundColor = "white";
   points += diceRoll;
 
   if (diceRoll === 1) {
@@ -65,8 +65,10 @@ function freez1() {
 
   if (totalpoint >= 100) {
     document.getElementById("win").style.display = "block";
-    document.getElementById("win").innerText =
-      username + " congrats! You’re the winner";
+    document.getElementById(
+      "win"
+    ).innerText = `${username}, congrats! Du vann på ${rounds} antal försök!`;
+
     document.getElementById("freeze").style.display = "none";
     document.getElementById("tryagain").style.display = "none";
     document.getElementById("resert").style.display = "block";
