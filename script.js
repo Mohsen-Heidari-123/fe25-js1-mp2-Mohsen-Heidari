@@ -10,10 +10,9 @@ console.log(dices);
 
 document.getElementById("startgame").addEventListener("click", function (i){
 
-    if(i.key==="Enter"){
         i.preventDefault();
         startpage();
-    }
+    
 });
 
 function startpage() {
